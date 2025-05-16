@@ -3,10 +3,10 @@ public class Main {
         Conta cc = new ContaCorrente("Paula");
         Conta cp = new ContaPoupanca("Luciana");
 
-        cc.depositar(1000);
-        cc.transferir(300, cp);
+        cc.depositar(1500);
+        cc.transferir(700, cp);
         
-        
+
         cc.imprimirExtrato();
         cp.imprimirExtrato();
     }
