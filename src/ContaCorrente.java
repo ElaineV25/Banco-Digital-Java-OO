@@ -1,6 +1,7 @@
 public class ContaCorrente extends Conta {
-    public ContaCorrente(String titular) {
-        super(titular);
+
+    public ContaCorrente(String agencia, String titular) {
+        super(agencia, titular);
     }
 
     @Override
@@ -9,4 +10,5 @@ public class ContaCorrente extends Conta {
         super.imprimirExtrato();
     }
 }
+
 

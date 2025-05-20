@@ -2,11 +2,13 @@ public abstract class Conta {
     private static int SEQUENCIAL = 1;
 
     protected int numero;
+    protected String agencia;
     protected String titular;
     protected double saldo;
 
-    public Conta(String titular) {
+    public Conta(String agencia, String titular) {
         this.numero = SEQUENCIAL++;
+        this.agencia = agencia;
         this.titular = titular;
         this.saldo = 0.0;
     }
@@ -33,7 +35,24 @@ public abstract class Conta {
     }
 
     public void imprimirExtrato() {
-        System.out.printf("Conta %d - Titular: %s - Saldo: %.2f\n", numero, titular, saldo);
+        System.out.printf("Agência: %s | Conta %d - Titular: %s - Saldo: %.2f\n",
+                agencia, numero, titular, saldo);
+    }
+
+    // Getters
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getAgencia() {
+        return agencia;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public double getSaldo() {
+        return saldo;
     }
 }
-
